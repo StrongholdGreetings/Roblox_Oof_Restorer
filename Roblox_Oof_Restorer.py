@@ -12,12 +12,17 @@ savedmode='Light'
 def ApplySettings():
 	global data,bgcolor,txtcolor,buttoncolor,modechoice,modeaddchoice
 	bgcolor='white'
-	with open("Data/Log.txt",'r') as f:
-		data=f.readlines()
-	modechoice=data[0]
-	modeaddchoice=data[1]
-	buttoncolor=modeaddchoice.removesuffix("\n")
-	txtcolor=modechoice.removesuffix("\n")
+	try:
+		with open("Data/Log.txt",'r') as f:
+			data=f.readlines()
+		modechoice=data[0]
+		modeaddchoice=data[1]
+		buttoncolor=modeaddchoice.removesuffix("\n")
+		txtcolor=modechoice.removesuffix("\n")
+	except FileNotFoundError:
+		data=["black","white"]
+		with open("Data/Log.txt",'w') as f:
+			data=f.writelines()
 
 appdir=os.getcwd()
 oggfile=f'{appdir}/Data/ouch.ogg'
