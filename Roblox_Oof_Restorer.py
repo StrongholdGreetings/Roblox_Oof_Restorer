@@ -119,7 +119,7 @@ try:
 except FileNotFoundError:
 	FirstTimeSetup()
 	
-version='v1.1.1'
+version='v1.2.1'
 oggfile=f'{appdir}/Data/ouch.ogg'
 icofile=f'{appdir}/Data/icon.ico'
 colordatafile=f'{appdir}/Data/ColorData.json'
@@ -314,7 +314,7 @@ def main():
 
 		#Version number
 		label3=Label(window)
-		label3.configure(text="Version 1.2.0",font=('Arial',8),fg=titlecolor,bg=bgcolor)
+		label3.configure(text="Version 1.2.1",font=('Arial',8),fg=titlecolor,bg=bgcolor)
 		label3.pack()
 
 		label4=Label(window)
@@ -449,7 +449,7 @@ def main():
 		label.configure(text="SETTINGS",font=('Arial',15,'bold'),fg=titlecolor,bg=bgcolor)
 		label.grid(column=0,row=0)
 		labelbl=Label(secondary_window)
-		labelbl.configure(text="Version 1.2.0",font=('Arial',7,'normal'),fg=titlecolor,bg=bgcolor)
+		labelbl.configure(text="Version 1.2.1",font=('Arial',7,'normal'),fg=titlecolor,bg=bgcolor)
 		labelbl.grid()
 
 		canvas1.config(yscrollcommand=vsb1.set)
